@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Page Example</title>
+<style>
+/* ==== Desktop-first styles (original) ==== */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: #333;
+  color: white;
+  padding: 20px;
+}
+
+nav {
+  background: #444;
+  color: white;
+  padding: 10px;
+}
+
+.container {
+  display: flex;
+}
+
+.sidebar {
+  width: 25%;
+  background: #f4f4f4;
+  padding: 20px;
+}
+
+.main {
+  width: 75%;
+  padding: 20px;
+}
+
+/* ==== Tablet and smaller screens ==== */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Stack instead of side-by-side */
+  }
+  .sidebar, .main {
+    width: 100%;
+    padding: 15px;
+  }
+}
+
+/* ==== Small mobile phones ==== */
+@media (max-width: 480px) {
+  header {
+    padding: 15px;
+    font-size: 1.2em;
+    text-align: center;
+  }
+  nav {
+    font-size: 0.9em;
+    text-align: center;
+  }
+  body {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>My Website</h1>
+</header>
+
+<nav>
+  <p>Home | About | Services | Contact</p>
+</nav>
+
+<div class="container">
+  <aside class="sidebar">
+    <h2>Sidebar</h2>
+    <p>Additional content for the sidebar.</p>
+  </aside>
+
+  <section class="main">
+    <h2>Main Content</h2>
+    <p>This is where your main content goes. On mobile, this section stacks under the sidebar.</p>
+  </section>
+</div>
+
+</body>
+</html>
